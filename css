@@ -1,0 +1,443 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif; /* Fonte principal */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6; /* Fundo suave */
+    scroll-behavior: smooth; /* Rolagem suave para links de navegação */
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    color: #007bff; /* Cor primária do logo */
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.logo a:hover {
+    color: #0056b3;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #007bff;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+    background: #007bff;
+}
+
+/* Menu mobile (oculto por padrão) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin-bottom: 4px;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Seção Hero */
+.hero {
+    background-color: #e0f2f7; /* Fundo azul claro */
+    padding: 80px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh; /* Altura mínima para ocupar a tela */
+    background-image: url('../images/hero-background.jpg'); /* Imagem de fundo opcional */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::before { /* Efeito overlay */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Cor escura com transparência */
+}
+
+.hero .container {
+    position: relative; /* Para garantir que o conteúdo fique acima do overlay */
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff; /* Texto branco no fundo escuro */
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    font-weight: 400;
+    max-width: 700px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 40px;
+    animation: float 4s ease-in-out infinite; /* Animação de flutuação */
+}
+
+/* Botão padrão */
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Seção Sobre Nós */
+.about-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.about-section .container {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Espaço entre o conteúdo e a imagem */
+}
+
+.about-content {
+    flex: 1; /* Ocupa o espaço disponível */
+}
+
+.about-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #0056b3;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.about-content p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.about-image {
+    flex: 1; /* Ocupa o espaço disponível */
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Seção Serviços */
+.services-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: #0056b3;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Layout responsivo */
+    gap: 30px;
+}
+
+.service-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-item img {
+    width: 80px; /* Tamanho dos ícones */
+    height: 80px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.service-item p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Seção Contato */
+.contact-section {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #0056b3;
+}
+
+.contact-section p {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Inter', sans-serif;
+}
+
+.contact-section textarea {
+    resize: vertical;
+}
+
+.contact-section button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-section button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animações */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Oculta o menu principal em telas pequenas */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajustar conforme a altura do header */
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav ul.show {
+        display: flex; /* Mostra o menu quando o toggle é clicado */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a::after {
+        display: none; /* Remove o indicador de hover do menu mobile */
+    }
+
+    .menu-toggle {
+        display: flex; /* Mostra o botão de menu em telas pequenas */
+    }
+
+    .hero .container {
+        flex-direction: column;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.1em;
+    }
+
+    .hero-image img {
+        margin-top: 30px;
+    }
+
+    .about-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    }
+}
