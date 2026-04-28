@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema Neutro - Seu Site Profissional</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#home">Seu Logo</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre Nós</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Bem-vindo ao Nosso Espaço Criativo</h1>
+                    <p>Explorando ideias e soluções com uma abordagem neutra e profissional.</p>
+                    <a href="#services" class="btn">Descubra Nossos Serviços</a>
+                </div>
+                <div class="hero-image">
+                    <!-- Substitua pela sua imagem de herói -->
+                    <img src="images/hero-image.jpg" alt="Imagem de destaque">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <h2>Sobre Nós</h2>
+                    <p>Somos uma equipe dedicada a oferecer soluções inovadoras com um olhar neutro e imparcial. Acreditamos na transparência e na excelência em cada projeto que realizamos.</p>
+                    <p>Nossa missão é construir pontes entre ideias e resultados, sempre com foco na qualidade e na satisfação do cliente.</p>
+                </div>
+                <div class="about-image">
+                    <!-- Substitua pela sua imagem sobre nós -->
+                    <img src="images/about-image.jpg" alt="Imagem sobre nós">
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2>Nossos Serviços</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <img src="images/service-icon-1.png" alt="Ícone de Serviço 1">
+                        <h3>Consultoria Estratégica</h3>
+                        <p>Análise aprofundada e planos de ação personalizados para o seu negócio.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="images/service-icon-2.png" alt="Ícone de Serviço 2">
+                        <h3>Desenvolvimento Web</h3>
+                        <p>Criação de sites modernos, responsivos e focados na experiência do usuário.</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="images/service-icon-3.png" alt="Ícone de Serviço 3">
+                        <h3>Design Gráfico</h3>
+                        <p>Soluções visuais impactantes que comunicam sua marca de forma eficaz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <p>Ficou interessado? Entre em contato conosco para saber mais sobre como podemos ajudar.</p>
+                <form action="#" method="post">
+                    <input type="text" name="name" placeholder="Seu Nome" required>
+                    <input type="email" name="email" placeholder="Seu E-mail" required>
+                    <textarea name="message" placeholder="Sua Mensagem" rows="6" required></textarea>
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Seu Nome/Nome da Empresa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
