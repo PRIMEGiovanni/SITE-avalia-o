@@ -1,60 +1,40 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // Menu mobile
-    const mobileMenuButton = document.getElementById('mobile-menu');
-    const navUl = document.querySelector('header nav ul');
+    // Validação simples do formulário de contato
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
 
-    if (mobileMenuButton && navUl) {
-        mobileMenuButton.addEventListener('click', () => {
-            navUl.classList.toggle('show');
-        });
-    }
-
-    // Animação de scroll no cabeçalho
-    const header = document.querySelector('header');
-
-    if (header) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) { // Mude 50 para a altura que desejar para ativar a animação
-                header.classList.add('scrolled');
+            if (name === '' || email === '' || message === '') {
+                alert('Por favor, preencha todos os campos.');
+                event.preventDefault(); // Impede o envio do formulário
             } else {
-                header.classList.remove('scrolled');
+                // Aqui você pode adicionar lógica para enviar os dados do formulário
+                // Por exemplo, usando Fetch API para enviar para um backend.
+                // Por enquanto, apenas mostramos uma mensagem de sucesso.
+                alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                // Opcional: Limpar o formulário após o envio
+                // contactForm.reset();
             }
         });
     }
 
-    // Animação ao rolar para elementos visíveis (Opcional - se quiser mais animações)
-    const animatedElements = document.querySelectorAll('section, .service-item, .about-content, .about-image, .contact-section form');
+    // Opcional: Animação sutil ao rolar (scroll) para seções
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 50; // 50px de margem acima
+            const screenHeight = window.innerHeight;
+            const scrollPosition = window.scrollY;
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target); // Para que a animação ocorra apenas uma vez
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + section.offsetHeight) {
+                // Você pode adicionar classes para animar elementos aqui se quiser
+                // Exemplo: section.classList.add('in-view');
             }
         });
-    }, {
-        threshold: 0.1 // Começa a animar quando 10% do elemento está visível
-    });
-
-    animatedElements.forEach(el => {
-        observer.observe(el);
     });
 
 });
-
-// Adicionar CSS para a animação de entrada
-// Você pode adicionar isso diretamente no CSS ou de forma dinâmica se preferir
-// Exemplo:
-/*
-.hero-content, .about-content, .service-item, .contact-section form {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-*/
