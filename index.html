@@ -3,36 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte, Futuro Sustentável</title>
+    <title>Agro Forte, Futuro Sustentável - Equilíbrio e Inovação</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Fontes Sugeridas -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <header>
+    <header class="site-header">
         <div class="container">
             <div class="logo">
-                <!-- Você pode adicionar um logo aqui -->
+                <i class="fas fa-seedling"></i> <!-- Ícone de planta -->
                 <h1>Agro Forte</h1>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#hero">Início</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
-                    <li><a href="#praticas">Práticas</a></li>
-                    <li><a href="#resultados">Resultados</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#hero" class="nav-link">Início</a></li>
+                    <li><a href="#sobre" class="nav-link">Nossa Visão</a></li>
+                    <li><a href="#praticas" class="nav-link">Práticas</a></li>
+                    <li><a href="#resultados" class="nav-link">Impacto</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
                 </ul>
             </nav>
+            <button class="mobile-nav-toggle"><i class="fas fa-bars"></i></button> <!-- Botão para menu mobile -->
         </div>
     </header>
 
-    <section id="hero">
+    <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div> <!-- Overlay para melhorar legibilidade -->
         <div class="container">
             <div class="hero-content">
-                <h2>Agro forte, futuro sustentável</h2>
-                <p>Equilíbrio entre produção e meio ambiente: cultivando hoje, preservando para sempre.</p>
-                <a href="#praticas" class="btn">Descubra Nossas Práticas</a>
+                <h2 class="hero-title" data-aos="fade-up">Agro forte, futuro sustentável</h2>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">Equilíbrio entre produção e meio ambiente: cultivando hoje, preservando para sempre.</p>
+                <a href="#praticas" class="btn btn-primary" data-aos="fade-up" data-aos-delay="200">Descubra Nossas Práticas</a>
             </div>
         </div>
     </section>
@@ -40,40 +45,48 @@
     <section id="sobre" class="section-padding">
         <div class="container">
             <div class="section-title">
-                <h3>Nossa Missão</h3>
+                <h3 class="title-green" data-aos="fade-in">Nossa Visão para o Agro</h3>
             </div>
-            <div class="about-content">
-                <p>Acreditamos que o agronegócio pode e deve ser um pilar de prosperidade econômica e responsabilidade ambiental. Nosso compromisso é com a inovação e a adoção de práticas que garantam a máxima produtividade, ao mesmo tempo em que protegem e restauram os recursos naturais para as futuras gerações.</p>
-                <p>Buscamos um futuro onde a terra seja cuidada com a mesma dedicação que os frutos que ela nos oferece.</p>
+            <div class="about-content grid-2-cols">
+                <div class="about-image" data-aos="fade-right">
+                    <!-- Substitua pela sua imagem pública -->
+                    <img src="https://via.placeholder.com/500x400?text=Agricultura+Moderna+e+Sustentável" alt="Paisagem agrícola com práticas sustentáveis">
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <p>Acreditamos que o agronegócio pode e deve ser um pilar de prosperidade econômica e responsabilidade ambiental. Nosso compromisso é com a inovação e a adoção de práticas que garantam a máxima produtividade, ao mesmo tempo em que protegem e restauram os recursos naturais para as futuras gerações.</p>
+                    <p>Buscamos um futuro onde a terra seja cuidada com a mesma dedicação que os frutos que ela nos oferece, promovendo um ciclo virtuoso entre o homem, a terra e o planeta.</p>
+                    <a href="#resultados" class="btn btn-secondary">Conheça Nosso Impacto</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="praticas" class="section-padding bg-light">
+    <section id="praticas" class="section-padding bg-light-green">
         <div class="container">
             <div class="section-title">
-                <h3>Práticas Sustentáveis</h3>
+                <h3 class="title-dark" data-aos="fade-in">Tecnologias e Práticas Sustentáveis</h3>
             </div>
             <div class="praticas-grid">
-                <div class="pratica-item">
-                    <img src="https://via.placeholder.com/80" alt="Agricultura Regenerativa">
-                    <h4>Agricultura Regenerativa</h4>
-                    <p>Técnicas que melhoram a saúde do solo, aumentam a biodiversidade e capturam carbono.</p>
+                <div class="pratica-item card" data-aos="fade-up">
+                    <!-- IMAGEM 1: ROOT ZONE IRRIGATION -->
+                    <img src="https://via.placeholder.com/300x200?text=Irrigação+Precisas" alt="Sistema de irrigação eficiente na zona radicular">
+                    <h4>Irrigação de Precisão</h4>
+                    <p>Implementamos sistemas de irrigação inteligentes que entregam a água diretamente na zona radicular das plantas, minimizando perdas e otimizando o uso hídrico.</p>
                 </div>
-                <div class="pratica-item">
-                    <img src="https://via.placeholder.com/80" alt="Uso Eficiente da Água">
-                    <h4>Uso Eficiente da Água</h4>
-                    <p>Sistemas de irrigação inteligentes e manejo consciente para otimizar o consumo hídrico.</p>
+                <div class="pratica-item card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://via.placeholder.com/300x200?text=Solo+Saudavel" alt="Solo rico em matéria orgânica">
+                    <h4>Saúde do Solo</h4>
+                    <p>Adotamos técnicas de agricultura regenerativa, como plantio direto, rotação de culturas e adubação verde, para aumentar a fertilidade e a capacidade de retenção de água do solo.</p>
                 </div>
-                <div class="pratica-item">
-                    <img src="https://via.placeholder.com/80" alt="Manejo Integrado de Pragas">
-                    <h4>Manejo Integrado de Pragas</h4>
-                    <p>Soluções que minimizam o uso de defensivos químicos, priorizando o controle biológico.</p>
+                <div class="pratica-item card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://via.placeholder.com/300x200?text=Biodiversidade" alt="Biodiversidade em uma fazenda sustentável">
+                    <h4>Conservação da Biodiversidade</h4>
+                    <p>Criamos e mantemos corredores ecológicos, áreas de mata nativa e incentivamos a presença de polinizadores e inimigos naturais de pragas.</p>
                 </div>
-                <div class="pratica-item">
-                    <img src="https://via.placeholder.com/80" alt="Energia Renovável">
-                    <h4>Energia Renovável</h4>
-                    <p>Adoção de fontes de energia limpa para reduzir a pegada de carbono das operações.</p>
+                <div class="pratica-item card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://via.placeholder.com/300x200?text=Energia+Limpa" alt="Painéis solares em uma propriedade rural">
+                    <h4>Energias Renováveis</h4>
+                    <p>Investimos em fontes de energia limpa, como solar e eólica, para reduzir nossa pegada de carbono e garantir autonomia energética.</p>
                 </div>
             </div>
         </div>
@@ -82,77 +95,86 @@
     <section id="resultados" class="section-padding">
         <div class="container">
             <div class="section-title">
-                <h3>Impacto Positivo</h3>
+                <h3 class="title-green" data-aos="fade-in">Resultados Comprovados: Produção Forte, Planeta Saudável</h3>
             </div>
-            <div class="resultados-grid">
-                <div class="resultado-item">
-                    <h4>Aumento da Produtividade</h4>
-                    <p>Técnicas sustentáveis comprovadamente elevam a qualidade e quantidade da produção a longo prazo.</p>
+            <div class="resultados-content grid-2-cols">
+                <div class="resultados-image" data-aos="fade-right">
+                    <!-- IMAGEM 2: INFOGRÁFICO -->
+                    <img src="https://via.placeholder.com/500x400?text=Infográfico+de+Resultados+Sustentáveis" alt="Infográfico mostrando os benefícios da agricultura sustentável">
                 </div>
-                <div class="resultado-item">
-                    <h4>Preservação Ambiental</h4>
-                    <p>Redução da poluição, proteção da biodiversidade e conservação dos recursos naturais.</p>
-                </div>
-                <div class="resultado-item">
-                    <h4>Viabilidade Econômica</h4>
-                    <p>Redução de custos com insumos e maior resiliência às mudanças climáticas.</p>
-                </div>
-                <div class="resultado-item">
-                    <h4>Bem-estar Social</h4>
-                    <p>Promoção de práticas justas e apoio a comunidades rurais.</p>
+                <div class="resultados-text" data-aos="fade-left">
+                    <div class="resultado-item">
+                        <h4><i class="fas fa-chart-line icon-green"></i> Aumento da Produtividade</h4>
+                        <p>Técnicas sustentáveis elevam a qualidade e quantidade da produção a longo prazo, com maior eficiência no uso de recursos.</p>
+                    </div>
+                    <div class="resultado-item">
+                        <h4><i class="fas fa-leaf icon-green"></i> Preservação Ambiental</h4>
+                        <p>Redução da poluição do solo e da água, proteção da biodiversidade e recuperação de ecossistemas.</p>
+                    </div>
+                    <div class="resultado-item">
+                        <h4><i class="fas fa-dollar-sign icon-green"></i> Viabilidade Econômica</h4>
+                        <p>Otimização de custos com insumos, menor dependência de fatores externos e maior valor agregado aos produtos.</p>
+                    </div>
+                    <div class="resultado-item">
+                        <h4><i class="fas fa-globe icon-green"></i> Resiliência Climática</h4>
+                        <p>Solos mais saudáveis e práticas conservacionistas tornam as propriedades mais resistentes a secas e outros eventos climáticos extremos.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contato" class="section-padding bg-light">
+    <section id="contato" class="section-padding bg-dark-green">
         <div class="container">
             <div class="section-title">
-                <h3>Entre em Contato</h3>
+                <h3 class="title-light" data-aos="fade-in">Fale Conosco e Cultive o Futuro Juntos</h3>
             </div>
-            <div class="contato-content">
-                <div class="contato-form">
-                    <h4>Deixe sua Mensagem</h4>
+            <div class="contato-content grid-2-cols-reverse">
+                <div class="contato-form-container" data-aos="fade-up">
+                    <h4>Envie sua Mensagem</h4>
                     <form id="contactForm">
                         <div class="form-group">
-                            <label for="name">Nome:</label>
-                            <input type="text" id="name" name="name" required>
+                            <label for="name">Seu Nome</label>
+                            <input type="text" id="name" name="name" required placeholder="Digite seu nome completo">
                         </div>
                         <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="email">Seu Email</label>
+                            <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
                         </div>
                         <div class="form-group">
-                            <label for="message">Mensagem:</label>
-                            <textarea id="message" name="message" rows="4" required></textarea>
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Conte-nos sobre seu projeto ou dúvida..."></textarea>
                         </div>
-                        <button type="submit" class="btn">Enviar</button>
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
                     </form>
                 </div>
-                <div class="contato-info">
-                    <h4>Fale Conosco</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Endereço: Sua Cidade, Seu Estado, Brasil</p>
-                    <p><i class="fas fa-phone"></i> Telefone: (XX) XXXX-XXXX</p>
-                    <p><i class="fas fa-envelope"></i> Email: contato@agroforte.com.br</p>
+                <div class="contato-info-container" data-aos="fade-up">
+                    <h4>Informações de Contato</h4>
+                    <p class="contact-info-item"><i class="fas fa-map-marker-alt"></i> Av. da Sustentabilidade, 123, Parque Tecnológico Agrícola, Cidade Verde - UF</p>
+                    <p class="contact-info-item"><i class="fas fa-phone"></i> (XX) XXXX-XXXX | (XX) 9XXXX-XXXX</p>
+                    <p class="contact-info-item"><i class="fas fa-envelope"></i> contato@agroforte.com.br</p>
+                    <p class="contact-info-item"><i class="fas fa-clock"></i> Segunda a Sexta: 8h - 18h</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2026 Agro Forte. Todos os direitos reservados.</p>
-            <div class="social-links">
-                <!-- Adicionar ícones de redes sociais aqui se desejar -->
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
+            <p class="footer-text">&copy; 2026 Agro Forte. Todos os direitos reservados. Uma iniciativa para um futuro sustentável.</p>
         </div>
     </footer>
 
+    <!-- Incluir Animate.css e AOS (Animate On Scroll) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
-    <!-- Inclua Font Awesome para ícones -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
